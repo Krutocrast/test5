@@ -1,0 +1,124 @@
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Good Morning Baby 💕</title>
+  <style>
+    :root {
+      --main-color: #ff4d88;
+      --bg-gradient: linear-gradient(to right, #ffe6f0, #ffe0e6);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-gradient);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      position: relative;
+      font-size: 5vw;
+      color: var(--main-color);
+      text-shadow: 2px 2px 8px #fff;
+      padding: 0 10px;
+      animation: fadeIn 2s ease-in-out forwards;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #cc0066;
+      font-style: italic;
+      animation: fadeIn 3s ease-in-out forwards;
+      opacity: 0.8;
+    }
+
+    .kiss {
+      position: absolute;
+      animation: floatKiss 5s infinite ease-in;
+      color: #ff1a75;
+      opacity: 0.8;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    @keyframes floatKiss {
+      0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 8vw;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 9vw;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>A very Good Morning Sri 💞 baby 💋</h1>
+  <h2>You’re my first smile, every morning.</h2>
+
+  <!-- Animated kisses -->
+  <script>
+    const kisses = ['💋', '😘', '💞', '💗', '💕'];
+    for (let i = 0; i < 40; i++) {
+      let kiss = document.createElement('div');
+      kiss.className = 'kiss';
+      kiss.innerText = kisses[Math.floor(Math.random() * kisses.length)];
+      kiss.style.left = Math.random() * 100 + 'vw';
+      kiss.style.animationDuration = (3 + Math.random() * 3) + 's';
+      kiss.style.fontSize = (1 + Math.random() * 2) + 'rem';
+      kiss.style.animationDelay = (Math.random() * 3) + 's';
+      document.body.appendChild(kiss);
+    }
+  </script>
+</body>
+</html>
